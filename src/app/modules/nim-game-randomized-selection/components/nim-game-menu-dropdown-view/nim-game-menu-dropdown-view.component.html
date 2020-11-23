@@ -1,0 +1,6 @@
+<mat-form-field appearance="fill">
+  <mat-label>Select opponent</mat-label>
+  <mat-select [(value)]="selectedOpponent" (selectionChange)="selectOpponent($event)">
+    <mat-option [value]="i" *ngFor="let option of opponents; let i = index">{{option}}</mat-option>
+  </mat-select>
+</mat-form-field>

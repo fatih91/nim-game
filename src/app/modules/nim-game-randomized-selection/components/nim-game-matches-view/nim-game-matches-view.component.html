@@ -1,0 +1,8 @@
+<div class="match-container">
+  <div *ngFor="let match of matches; let i = index">
+    <div class="single-match-container" >
+      <img (click)="this.selectMatchEvent(i, match)" class="match-adjustment" src="../../../../../assets/images/match.svg" alt="match">
+      <span class="match-value">{{match + 1}}</span>
+    </div>
+  </div>
+</div>

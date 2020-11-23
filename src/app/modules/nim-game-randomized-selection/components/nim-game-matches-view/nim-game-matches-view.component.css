@@ -1,0 +1,21 @@
+.match-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.match-adjustment{
+  width: 14px;
+}
+
+.single-match-container{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.match-value{
+  color: white;
+  margin-top: 3px;
+}

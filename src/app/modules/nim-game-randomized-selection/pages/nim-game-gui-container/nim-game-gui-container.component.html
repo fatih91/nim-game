@@ -1,0 +1,31 @@
+<mat-grid-list cols="4" rowHeight="120px">
+
+  <!--  Dropdown Tile-->
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <app-nim-game-menu-dropdown-view (selectMenuItem)="changeMenuItem($event)"></app-nim-game-menu-dropdown-view>
+  </mat-grid-tile>
+
+  <!--A view for displaying the matches-->
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <app-nim-game-matches-view></app-nim-game-matches-view>
+  </mat-grid-tile>
+
+  <!--  Selection Tile-->
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <div [ngSwitch]="selectedMenuItem">
+      <div *ngSwitchCase="0" appComputerRandomSelection>
+        <app-nim-game-player-selection-view></app-nim-game-player-selection-view>
+      </div>
+      <div *ngSwitchCase="1" appComputerOptimizedSelection>
+        <app-nim-game-player-selection-view></app-nim-game-player-selection-view>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <!--  Rule Tile-->
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <div style="color:{{rule.color}}">{{rule.text}}</div>
+  </mat-grid-tile>
+
+</mat-grid-list>
+
